@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>抽奖案例</title>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+        }
+        html,body {
+            width: 100%;
+            height: 100%;
+            background: url("img/bj.jpg") no-repeat center center;
+            background-size: 100% 100%;
+            overflow: hidden;
+        }
+        .con {
+            width: 500px;
+            height: 100px;
+            box-shadow: 0px 0px 0px rgb(224, 230, 195);
+            margin: 5% auto;
+            border-radius: 25px;
+            animation: aa 0.5s linear infinite;
+            font-size: 50px;
+            text-align: center;
+            line-height: 100px;
+        }
+        @keyframes aa {
+            from{
+            }to{
+                box-shadow: 0px 0px 20px rgb(63, 24, 216);
+            }
+        }
+        .btn{
+            width: 150px;
+            height: 50px;
+            margin: 10% auto;
+        }
+        .btn button {
+            width: 100%;
+            height: 100%;
+            background-color: rgb(241, 27, 27);
+            font-size: 30px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="con" id="con">准备好了么?</div>
+    <div class="btn">
+        <button id="ks">开始</button>
+    </div>
+</body>
+<script>
+    var arr = ["小米优惠券","小米电脑","小米手机","小米电视","小米耳机","谢谢参与"];
+    var con = document.getElementById("con");
+    var ks = document.getElementById("ks");
+    var aa = true;
+    var i = 0;
+    var time;
+    ks.onclick = function(){
+        if (aa == true){
+            aa = false;
+            ks.innerHTML = "停止";
+            timer = setInterval(function(){
+                var ran = Math.floor(Math.random()*6);
+                con.innerHTML = arr[ran];
+                if (i < arr.length - 1){
+                    i++;
+                }else{
+                    i = 0;
+                }
+            },100);
+        }else{
+            aa = true;
+            ks.innerHTML = "开始";
+            clearInterval(timer);
+        }
+    };
+</script>
+</html>

@@ -1,0 +1,596 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.topBlack {
+    width: 100%;
+    height: 40px;
+    background: #333;
+}
+
+.topCon {
+    width: 1226px;
+    height: 40px;
+    margin: 0px auto;
+
+}
+
+.topLeft {
+    width: 800px;
+    height: 40px;
+    line-height: 40px;
+    float: left;
+
+}
+
+.topLeft a,
+.topRight a {
+    font-size: 12px;
+    color: #b0b0b0;
+    text-decoration: none;
+}
+
+.topLeft a:hover,
+.topRight a:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
+.topLeft span,
+.topRight span {
+    font-size: 12px;
+    color: #424242;
+}
+
+.topRight {
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    float: right;
+}
+
+.car {
+    width: 140px;
+    height: 40px;
+    line-height: 40px;
+    float: right;
+    position: relative;
+}
+
+.car span {
+    font-size: 12px;
+    color: #b0b0b0;
+    float: left;
+}
+
+.car .bb {
+    width: 30px;
+    height: 30px;
+    margin: 10px 10px 10px 20px;
+    float: left;
+}
+
+.carlist {
+    width: 300px;
+    height: 100px;
+    background-color: #fff;
+    box-shadow: 0px 2px 2px #b0b0b0;
+    font-size: 12px;
+    position: absolute;
+    right: 0px;
+    top: 40px;
+    text-align: center;
+    line-height: 100px;
+    color: #b0b0b0;
+    display: none;
+}
+
+.app {
+    position: relative;
+}
+
+.appBox {
+    z-index: 40;
+    width: 140px;
+    height: 160px;
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 27px;
+    margin-left: -68px;
+    display: none;
+}
+
+.ewm {
+    width: 120px;
+    height: 120px;
+    margin: 10px 10px 0px 10px;
+}
+
+.appBox p {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    color: #424242;
+    margin-top: -20px;
+
+}
+
+.appSmall {
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    margin: -8px auto;
+    transform: rotate(45deg);
+}
+
+.navBox {
+
+    width: 1226px;
+    height: 100px;
+    /* background-color: pink;  */
+    margin: 0px auto;
+}
+
+.navLogo {
+    width: 56px;
+    height: 56px;
+    float: left;
+    margin-top: 20px;
+}
+
+.navUl {
+    float: left;
+    margin-left: 180px;
+}
+
+.navUl li {
+    float: left;
+    list-style: none;
+    line-height: 100px;
+}
+
+.navUl li a {
+    padding: 0px 10px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #333;
+}
+
+.navUl li a:hover {
+    color: #ff6700;
+    cursor: pointer;
+}
+
+/* .SS {
+    width: 245px;
+    height: 40px;
+    background: #fff;
+    padding: 0px 10px;
+    margin-top: 26px;
+    margin-left: 30px;
+} */
+
+.navList {
+    z-index: 30;
+    width: 100%;
+    height: 250px;
+    /* background: red; */
+    position: absolute;
+    display: none;
+    border-top: 1px solid #b0b0b0;
+    box-shadow: 0px 2px 2px #b0b0b0;
+}
+
+.navListCon {
+    width: 1226px;
+    background-color: #fff;
+    height: 250px;
+    margin: 0px auto;
+}
+
+.carouseBox {
+    width: 1226px;     
+    height: 460px;
+    /* background-color: yellow; */
+    margin: 0px auto;
+    position: relative;
+    /* border: 1px solid red; */
+    overflow: hidden;
+    /* display: none; */
+}
+
+.carouseBox .cc {
+    width: 1226px;
+    height: 460px;
+    position: absolute;
+    /* display: none; */
+    left: 1226px;
+    top: 0px;
+}
+
+
+/* 只显示第一张 */
+.carouseBox .cc:first-child {
+    /* display: block; */
+    left: 0px;
+}
+
+.carouseBoxList{
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+
+.carouseBoxList li{
+    float: left;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    border: 1px solid #b0b0b0;
+    margin: 0px 5px;
+    list-style: none;
+}
+
+.carouseBoxList .one{
+    background: #fff;
+}
+
+.leftBtn,.rightBtn{
+    user-select: none;
+    width: 40px;
+    height: 70px;
+    background: rgba(0, 0, 0, 0);
+    /* background: red; */
+    position: absolute;
+    top: 195px;
+    line-height: 70px;
+    font-size: 50px;
+    color: #fff;
+    font-family: "幼圆";
+    cursor: pointer;
+}
+
+.leftBtn{
+    left: 235px;
+}
+
+.rightBtn{
+    right: 0px;
+}
+
+.leftBtn:hover,.rightBtn:hover{
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.leftBox{
+    position: absolute;
+    width: 234px;
+    height: 460px;
+    background: rgba(105, 101, 101, .6);
+    top: 0px;
+    left: 0px;
+}
+
+.leftList{
+    width: 234px;
+    height: 42px;
+    /* border: 1px solid red; */
+    margin-top: 20px;
+}
+
+.leftList li{
+    width: 234px;
+    height: 42px;
+    /* border: 1px solid red; */
+    /* margin-top: 20px; */
+    color: #fff;
+    line-height: 42px;
+    font-size: 14px;
+    padding: 0px 30px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.leftList li span{
+    float: right;
+    font-family: "幼圆";
+    font-weight: bolder;
+}
+
+.leftList li:hover{
+    background: #ff6700;
+}
+
+.leftss{
+    position: relative;
+}
+
+
+.leftaa{
+    width: 992px;
+    height: 460px;
+    background-color: #fff;
+    position: absolute;
+    left: 381px;
+    top: -460px;
+    box-shadow:  5px 5px 5px #b0b0b0;
+} 
+
+.addBox {
+    z-index: 40;
+    width: 1240px;
+    height: 170px;
+    /* background: blue; */
+    margin: 10px auto;
+    /* border: 1px solid red; */
+}
+
+.adcBox{
+    width: 234px;
+    height: 170px;
+    color: #333333;
+    background: #5f5750;
+    position:absolute;
+    margin-left: 7.5px;
+    overflow: hidden;
+}
+
+.wDiv{
+    width: 68px;
+    height: 83px;
+    /* background: #ffffff; */
+    float: left;
+    margin: 5px 8px;
+    transform: all 0.3;
+    margin-top: 0px;
+    margin-left: 2px;
+    /* border: 1px solid red; */
+}
+
+.wImg{
+    width: 24px;
+    height: 24px;
+    margin-left: 20px;
+    margin-top: 18px;
+    opacity: 0.8;
+}
+
+.wImg:hover,
+.wName:hover {
+    opacity: 1;
+}
+
+.wName{
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+.adpBox{
+    width: 1006px;
+    height: 170px;
+    margin-left: 241.5px;
+}
+.adpBox1{
+    width: 316px;
+    height: 170px;
+    margin-left: 14px;
+    float: left;
+}
+
+.adpBox1:hover{
+    box-shadow: 0px 5px 5px #b0b0b0;
+    transform: translateY(-3px);
+}
+
+.adpBox2{
+    width: 316px;
+    height: 170px;
+    margin-left: 14px;
+    float: left;
+}
+
+.adpBox2:hover{
+    box-shadow: 0px 5px 5px #b0b0b0;
+    transform: translateY(-3px);
+}
+
+.adpBox3{
+    width: 316px;
+    height: 170px;
+    margin-left: 14px;
+    float: left;
+}
+
+.adpBox3:hover{
+    box-shadow: 0px 5px 5px #b0b0b0;
+    transform: translateY(-3px);
+}
+
+.hBox{
+    width: 316px;
+    height: 170px;
+}
+
+.bigBox {
+    width: 100%;
+    height: auto;
+    background-color: #f5f5f5;
+    /* margin: 0px auto; */
+    overflow: hidden;
+}
+
+.noteBox{
+    width: 1226px;
+    height: 120px;
+    margin: auto;
+    margin-top: 20px;
+    /* border: 1px solid red; */
+}
+
+.noteBox img{
+    width: 1226px;
+    height: 120px;
+    /* border: 1px solid rgb(53, 192, 7); */
+}
+
+.box-hd{
+    width: 1226px;
+    height: 50px;
+    margin: auto;
+    margin-top: 20px;
+    /* border: 1px solid red; */
+}
+
+.box-hk{
+    float: right;
+    margin-top: -28px;
+}
+
+.goodsBox {
+    width: 1226px;
+    height: auto;
+    /* background: yellow; */
+    margin: 0px auto;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.smBox{
+    width: 18%;
+    height: 600px;
+    /* border: 1px solid red; */
+    float: left;
+}
+
+.smBox img{
+    width: 100%;
+    height: 600px;
+    /* border: 1px solid rgb(17, 178, 81); */
+}
+
+.smBox:hover{
+    box-shadow: 0px 5px 5px #b0b0b0;
+    transform: translateY(-3px);
+}
+
+.ll{
+    width: 10px;
+    height: 600px;
+    float: left;
+    /* border: 1px solid red; */
+}
+
+.gDiv{
+    width: 240px;
+    height: 300px;
+    background: #fff;
+    float: left;
+    margin: 5px 8px;
+    transform: all 0.3;
+    margin-top: 0px;
+    margin-left: 0px;
+    /* border: 1px solid red; */
+}
+
+.gDiv:hover{
+    box-shadow: 0px 5px 5px #b0b0b0;
+    transform: translateY(-3px);
+}
+
+.gImg{
+    width: 160px;
+    height: 160px;
+    margin-left: 10%;
+    margin-top: 30px;
+}
+
+.gName{
+    color: #333;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.gTxt{
+    width: 100%;
+    text-align: center;
+    color: #b0b0b0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 12px;
+}
+
+.gRmb{
+    width: 100%;
+    text-align: center;
+    color: #ff6700;
+}
+
+.goodsDiv {
+    width: 200px;
+    height: 120px;
+    border-right: 1px solid #b0b0b0;
+    float: left;
+    margin-top: 40px;
+}
+
+.navListCon div:last-child {
+    border: none;
+}
+
+.goodsImg {
+    width: 80%;
+    margin-left: 10%;
+}
+
+.goodsName {
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.goodsRmb {
+    width: 100%;
+    font-size: 14px;
+    text-align: center;
+    color: #ff6700;
+    margin-top: 10px;
+}
+
+.doomDiv{
+    width: 240px;
+    height: 70px;
+    /* border: 1px solid red; */
+    float: left;
+    margin-top: 8px;
+    
+    line-height: 70px;
+    position: relative;
+}
+
+.doomDiv .doomImg{
+    width: 40px;
+    height: 40px;
+    margin-left: 10%;
+}
+
+.doomName {
+    position: absolute;
+    font-size: 14px;
+    margin-top: 10px;
+    /* float: right; */
+    margin-left: 10px;
+    top: -25px;
+    left: 60px;
+    /* display: inline-block;
+    padding-left: 0%; 
+    line-height: 70px; */
+}

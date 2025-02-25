@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>计算器</title>
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+    body {
+        background-color: rgb(15, 180, 152);
+    }
+    #conunter {
+        width: 50%;
+        height: 400px;
+        background-color: skyblue;
+        /* margin-top: 40px; */
+        margin: 150px auto;
+        /* border: 1px solid red; */
+    }
+    .b{
+        width: 40px;
+        height: 40px;
+    }
+    .a{
+        width: 250px;
+        height: 20px;
+    }
+</style>
+<body>
+    <div>
+        <div align="center" id="conunter">
+            <h2>简易计算</h2>
+            <tr>
+                <input class="a" type="text" value="" id="result"/>
+            </tr>
+            <table id="box">
+                <tr>
+                    <td><input class="b" type="button" value="7"/></td>
+                    <td><input class="b" type="button" value="8"/></td>
+                    <td><input class="b" type="button" value="9"/></td>
+                    <td><input class="b" type="button" value="+"/></td>
+                </tr>
+                <tr>
+                    <td><input class="b" type="button" value="4"/></td>
+                    <td><input class="b" type="button" value="5"/></td>
+                    <td><input class="b" type="button" value="6"/></td>
+                    <td><input class="b" type="button" value="-"/></td>
+                </tr>
+                <tr>
+                    <td><input class="b" type="button" value="1"/></td>
+                    <td><input class="b" type="button" value="2"/></td>
+                    <td><input class="b" type="button" value="3"/></td>
+                    <td><input class="b" type="button" value="*"/></td>
+                </tr>
+                <tr>
+                    <td><input class="b" type="button" value="0"/></td>
+                    <td><input class="b" type="button" value="c"/></td>
+                    <td><input class="b" type="button" value="="/></td>
+                    <td><input class="b" type="button" value="/"/></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+<script>
+    onload=function(){
+        console.log("................");
+        //var box = document.getElementById("box");
+        var inputs= box.getElementsByTagName("input");
+        for (var i = 0;i < inputs.length;i++){
+            //var s=inputs[i].value;
+            inputs[i].onclick = function(){
+                doInput(this.value);
+            }
+        }
+    };
+
+    var falg=false;    //记录是否需要清空
+    var num = "0";     //保存字符串
+    var operation ="";
+    function doInput(a){
+        var result = document.getElementById("result");
+        switch (a){
+            case "=":
+                result.value = calValue(
+                    parseInt(num),
+                    parseInt(result.value),
+                    operation
+                );
+                operation = "";
+                num = "";
+                falg = "";
+                break;
+            case "+":
+            case "-": 
+            case "*": 
+            case "/":
+                num= result.value;
+                operation =a;
+                falg=true;
+                break;
+            case "c":
+                result.value="";
+                num="";
+                operation="";
+                falg=true;
+                break;
+            default:
+                if(falg){
+                    result.value = a;
+                    falg=false;
+                }
+                else{
+                    result.value=parseInt(result.value+a);
+                }
+                break;
+        }
+    }
+    function calValue(h,k,operation){
+        var ff = "0";
+        switch(operation){
+            case "+":
+                ff=h+k;
+                break;
+            case "-":
+                ff=h-k;
+                break;
+            case "*":
+                ff=h*k;
+                break;
+            case "/":
+                ff=h/k;
+                break;
+        }
+        return ff;
+    }
+    </script>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./重置样式biao.css">
+    <link rel="stylesheet" href="../字体/css/all.css">
+    <link rel="stylesheet" href="../字体/font_3880463_nwzjjszkde9/iconfont.css">
+    <style>
+        body{
+            font-size: 12px;
+        }
+        .clearfix::before,
+        .clearfix::after{
+            content: '';
+            display: table;
+            clear: both;
+        }
+        .top-nav{
+            width: 100%;
+            height: 30px;
+            line-height: 30px;
+            background-color: #e3e4e5;
+        }
+        .top-a-nav{
+            width: 1190px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .dd{
+            float: left;
+        }
+        .left{
+            padding: 0 10px;
+            position: relative;
+            border: 1px transparent solid;
+            z-index: 1;
+        }
+        .dd:hover .left{
+            background-color: #fff;
+            border: 1px rgb(204, 204, 204) solid;
+            border-bottom: none;
+        }
+        .bottm{
+            display: none;
+            width: 320px;
+            height: 436px;
+            background-color: #fff;
+            border: 1px rgb(204, 204, 204) solid;
+            box-shadow: 0 0 2px rgb(0, 0, 0,.2);
+            position: absolute;
+            top: 30px;
+        }
+        .dd:hover .bottm{
+            display: block;
+        }
+        
+        .right{
+            float: right;
+        }
+        .right li{
+            float: left;
+        }
+        
+        .jingdong{
+            display: none;
+            width: 200px;
+            height: 150px;
+            background-color: #fff;
+            border: 1px rgb(204, 204, 204) solid;
+            box-shadow: 0 0 2px rgb(0, 0, 0,.2);
+            position: absolute;
+            top: 30px;
+        }
+        .jing:hover .jingdong{
+            display: block;
+        }
+        
+        .dong{
+            padding: 0 10px;
+            position: relative;
+            z-index: 1;
+            border: 1px transparent solid;
+        }
+        .jing:hover .dong{
+            background-color: #fff;
+            border: 1px rgb(204, 204, 204) solid;
+            border-bottom: none;
+            
+        }
+        .top-a-nav a,
+        .top-a-nav span,
+        .top-a-nav i{
+            color: #999;
+        }
+        i.iconfont{
+            color: #f10215;
+            font-size: 12px;
+        }
+        .right .aa{
+            width: 1px;
+            height: 10px;
+            background-color: rgb(200, 198, 198);
+            margin: 10px 10px;
+        }
+        .top-a-nav a:hover,
+        .top-a-nav span:hover,
+        .top-a-nav .line{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-nav">
+        <div class="top-a-nav clearfix">
+            <div class="dd">
+                <div class="left">
+                    <i class="iconfont">&#xe650;</i>
+                    <a href="javascript:;">广东</a>
+                </div>
+                <div class="bottm"></div>
+            </div>
+            
+            <ul class="right">
+                <li>
+                    <a href="javascript:;">你好，请登录&nbsp;&nbsp;</a>
+                </li>
+                <li>
+                    <a class="line" href="javascript:;">免费登录</a>
+                    <li class="aa"></li>
+                </li>
+                
+                <li>
+                    <a href="javascript:;">我的订单</a>
+                </li>
+                <li class="aa"></li>
+
+
+                <li class="jing">
+                    <div class="dong">
+                        <a href="javascript:;">我的京东</a>
+                        <i class="fas fa-angle-down"></i>
+                    </div>
+                    <div class="jingdong"></div>
+                </li>
+                
+
+
+                <li class="aa"></li>
+                <li>
+                    <a class="line" href="javascript:;">企业采购</a>
+                    <i class="fas fa-angle-down"></i>
+                </li>
+                <li class="aa"></li>
+                <li>
+                    <span>商家服务</span>
+                    <i class="fas fa-angle-down"></i>
+                </li>
+                <li class="aa"></li>
+                <li>
+                    <span>网站导航</span>
+                    <i class="fas fa-angle-down"></i>
+                </li>
+                <li class="aa"></li>
+                <li>
+                    <span>手机京东</span>
+                </li>
+                <li class="aa"></li>
+                <li>
+                    <span>网站无障碍</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

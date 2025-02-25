@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>放大镜</title>
+    <style>
+        * {
+            padding: 0%;
+            margin: 0%;
+        }
+        #aa {
+            width: 400px;
+            height: 400px;
+            /* background-color: aqua; */
+        }
+        #ss {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            position: absolute;
+            display: none;
+            left: 400px;
+            top: 0%;
+            overflow: hidden;
+            /* opacity: 0; */
+        }
+        #bb,#dd {
+            width: 400px;
+            height:400px;
+        }
+        ul>li {
+            width: 100px;
+            height: 100px;
+            float: left;
+            list-style: none;
+        }
+        .cc {
+            width: 100px;
+            height: 100px;
+            /* position: absolute;
+            top: 400px; */
+        }
+        .cc:hover{
+            border: 1px solid rgb(174, 255, 0);
+        }
+        #red {
+            width: 100px;
+            height: 100px;
+            background-color: brown;
+            display: none;
+            position: absolute;
+            opacity: 0.5;
+            left: 0px;
+            top: 0px;
+        }
+        #s {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div id="aa">
+        <div id="bb"><img src="imgs/big1.jpg" id="dd">
+        <div id="red"></div>
+        </div>
+        <div id="ss"><img src="imgs/big1.jpg" id="s"></div>
+            <ul>
+                <li><img class="cc" src="imgs/small1.jpg" big-src="imgs/big1.jpg"></li>
+                <li><img class="cc" src="imgs/small2.jpg" big-src="imgs/big2.jpg"></li>
+                <li><img class="cc" src="imgs/small3.jpg" big-src="imgs/big3.jpg"></li>
+                <li><img class="cc" src="imgs/small4.jpg" big-src="imgs/big4.jpg"></li>
+            </ul>
+    </div>
+</body>
+<script>
+    var c=document.getElementsByClassName("cc");
+    var s=document.getElementById("s");
+    var d = document.getElementById("dd");
+    for (var i = 0; i < c.length; i++ ){
+        var cd = c[i];
+
+        cd.onmouseenter = function(){
+            d.src = this.src;
+            s.src = this.getAttribute("big-src");
+        };
+    };
+    var showdiv = document.getElementById("bb");
+    var red = document.getElementById("red");
+    var ss = document.getElementById("ss");
+    showdiv.onmousemove = function(e){
+        red.style.display = "block";
+        ss.style.display = "block";
+
+        var x = e.clientX;
+        var y = e.clientY;
+
+        x = x - 50;
+        y = y - 50;
+        if(x<0){x=0;}
+        if(y<=0){y=0;}
+        if(x>=300){x=300;}
+        if(y>=300){y=300;}
+        red.style.left = x+"px";
+        red.style.top = y+"px";
+        var bigX = (x*800)/400;
+        var bigY = (y*800)/400;
+        s.style.left = -bigX + "px";
+        s.style.top = -bigY + "px";
+    };
+
+    showdiv.onmouseleave = function(){
+        red.style.display = "none";
+        ss.style.display = "none";
+    };
+</script>
+</html>
